@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200902032426_No_age.cs" />
+    <Compile Remove="Migrations\20200902032426_No_age.Designer.cs" />
+    <Compile Remove="Migrations\20200902033023_Age_Add.cs" />
+    <Compile Remove="Migrations\20200902033023_Age_Add.Designer.cs" />
+    <Compile Remove="Migrations\20200902033600_Normal_DB.cs" />
+    <Compile Remove="Migrations\20200902033600_Normal_DB.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />

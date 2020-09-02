@@ -25,13 +25,13 @@ namespace ListTest.Controllers
         public IQueryable GetUsers()
         {
             IQueryable a = _context.Users
-              .Include(r => r.UserRoles)
+       /*       .Include(r => r.UserRoles)
               .Select(x => new
            {
                // Id = x.Id,
                Name = x.Name,
                Role = x.UserRoles.Select(s => s.Role.Role)
-              });
+              })*/;
             return a;
 
             
