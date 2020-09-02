@@ -37,6 +37,16 @@ namespace ListTest
                    .HasForeignKey(p => p.IdRoles)
                    ;
 
+            modelBuilder.Entity<Appointment>()
+                   .HasOne(c => c.User)
+                   .WithOne(c => c.Appointment)
+                   .HasForeignKey<Appointment>(c =>c.Id)
+                   ;
+
+            modelBuilder.Entity<Appointment>()
+
+          .HasKey(b => b.Id);
+
             modelBuilder.Entity<UserRoles>()
 
           .HasKey(b => new { b.IdUser, b.IdRoles });
@@ -50,5 +60,8 @@ namespace ListTest
      
 
         public DbSet<ListTest.Models.UserRoles> UserRoles { get; set; }
+     
+
+        public DbSet<ListTest.Models.Appointment> Appointment { get; set; }
     }
 }
